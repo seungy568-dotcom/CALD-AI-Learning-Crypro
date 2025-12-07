@@ -10,7 +10,7 @@ class PriceService {
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      return double.parse(data["price"]);
+      return double.tryParse(data["price"]);
     }
 
     return null;
