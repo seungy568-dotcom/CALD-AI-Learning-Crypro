@@ -6,7 +6,7 @@ class PriceService {
 
   Future<double?> getPrice(String symbol) async {
     try {
-      final response = await http.get(Uri.parse('$baseUrl?symbol=$symbol'));
+      final response = await http.get(Uri.parse('$baseUrl?symbol=TRXUSDT'));
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
