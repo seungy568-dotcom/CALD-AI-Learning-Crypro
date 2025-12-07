@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   Future<void> loadPrice() async {
     setState(() => loading = true);
 
-    final result = await priceService.getPrice("BTCUSDT");
+    final result = await priceService.getPrice("TRXUSDT");
 
     setState(() {
       price = result;
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     price == null
                         ? "Không lấy được giá"
-                        : "BTC/USDT: $price",
+                        : "TRX/USDT: $price",
                     style: const TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   const SizedBox(height: 20),
