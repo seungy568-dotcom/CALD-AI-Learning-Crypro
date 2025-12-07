@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
     <script>
       async function fetchPrice() {
         try {
-          const res = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=TRXUSDT');
+          const res = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=$symbol');
           const data = await res.json();
           const price = parseFloat(data.price);
           document.getElementById('price').innerText = price.toFixed(2) + ' USDT';
